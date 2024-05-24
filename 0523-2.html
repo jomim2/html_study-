@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+    <style>
+        body>* {
+            max-width:500px;
+            margin: auto;}        
+        p::before {
+            content: "라인컴퓨터:";
+        }
+        p:hover::before {background: red;}
+
+        h1::before {
+            content: "♡";
+        }
+        h1:hover::before {color: red;}
+
+        h1::AFTER {
+            content: "♡";color: rgb(146, 151, 36);
+        }
+
+        h1 {
+            font-size: 11pt;
+            font-weight: normal;
+            border: 2px dashed blue;
+        }
+        
+
+        p { 
+            border: 1px solid red;
+            color: blue;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>가상선택자 연습중입니다.</h1>
+    <H1>종업원</H1>
+    <P>원피스</P>
+
+    <p>My name is Donald</p>
+    <p>I live in 안솽</p>
+
+</body>
+
+</html>

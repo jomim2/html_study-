@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라인컴퓨터아트학원</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Orbit&family=Song+Myung&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {margin: 0;}
+        h1 {
+            font-family: "Song Myung", serif;
+        }
+
+        #layout01 {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header {
+            background-color: yellowgreen;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header:hover {
+            background: tomato;
+        }
+
+        #layout02 {
+
+            display: flex;
+        }
+
+        main {
+
+            flex: 2.5;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: pink;
+            /* list-style-position: inside; */
+            padding-left: 0;
+            /* max-width: 700px; */
+            margin: auto;
+            padding: 50px 0;
+            /* list-style-type: circle; */
+            justify-content:center;
+            list-style: none;
+/* text-align: center; */
+
+
+        }
+
+        nav li {
+            border: 0.3pt red solid;
+            flex: 1;
+            text-align: center;
+            transition: 0.5s;
+            flex-basis: 135px;
+        }
+
+        nav a {
+            font-family: "Orbit", sans-serif;
+            font-weight: 900;
+            color: black;
+            text-decoration: none;
+        }
+
+        nav li:hover {
+            transform: scale(1.5);
+        }
+
+
+        main section {
+            font-family: "Bagel Fat One", system-ui;
+            padding: 20px;
+            background: aqua;
+            transition: 0.2s;
+
+        }
+
+        main section:hover {
+            transform: rotate(10deg);
+        }
+
+        main article {
+            font-family: "Song Myung", serif;
+            padding: 20px;
+            background: gold;
+        }
+
+        aside {
+            padding: 20px;
+            background: linear-gradient(rgb(191, 90, 151), rgb(255, 255, 255));
+            flex: 1;
+        }
+
+        aside:hover {
+
+            background: linear-gradient(red, yellowgreen);
+        }
+
+        /* 작은기계장치에 대한 설정 (최대 넓이 550픽셀) 0부터 550까지 적용됨 */
+        @media(max-width:550px) {
+            #layout02 {
+                flex-direction: column;
+            }
+        #down {
+                flex-direction: column;
+            }
+           
+            }
+        
+
+        footer {
+            background: linear-gradient(orange, yellow);
+            color: rgb(235, 93, 171);
+            text-align: center;
+            padding: 20px;
+            font-family: "Orbit", sans-serif;
+        }
+
+        footer:hover {
+            background: linear-gradient(yellow, orange);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout01">
+        <header>
+            <h1>마크업 첫걸음</h1>
+
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+            </ul>
+            <div id="down">
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+        </div>
+        </nav>
+        <div id="layout02">
+            <main>
+                <section>
+
+                    <h2>정보구역-1</h2>
+                    <p>모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야
+                        한다.</p>
+                    <p>국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다.
+                        가부동수인 때에는 부결된 것으로 본다.</p>
+                </section>
+                <article>
+
+                    <h2>정보구역-2</h2>
+                    <p>형사피고인은 유죄의 판결이 확정될 때까지는 무죄로 추정된다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다. 국민의
+                        모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수
+                        없다.</p>
+                </article>
+            </main>
+            <aside>
+                <h3>부가정보</h3>
+
+                <p>국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다.</p>
+
+                <p>국회는 헌법개정안이 공고된 날로부터 60일 이내에 의결하여야 하며, 국회의 의결은 재적의원 3분의 2 이상의 찬성을 얻어야 한다.</p>
+
+                <p>대법원장은 국회의 동의를 얻어 대통령이 임명한다. 대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.</p>
+            </aside>
+
+        </div>
+        <footer>
+            <h3> 하단구역</h3>
+            <p>대법원장은 국회의 동의를 얻어 대통령이 임명한다. 대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

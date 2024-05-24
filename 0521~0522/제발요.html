@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴나누기</title>
+    <style>
+        body {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        nav ul{
+            padding: 20px;
+            background-color: pink;
+            display: flex;
+            margin: auto;
+        }
+
+        ul li {
+            flex: 1;
+        }
+
+        @media(max-width:550px) {
+            nav li:nth-child(5) 
+           {flex-direction: column;}
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </div>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

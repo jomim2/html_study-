@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미션 복습하기</title>
+    <style>
+        #layout1 {
+            border: 3px darkcyan solid;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header {
+            background: linear-gradient(orange, gold);
+            padding: 20px;
+            text-align: center;}
+        nav {
+            height: 300px;
+            background:radial-gradient(circle,rgb(3, 3, 0),rgb(187, 214, 100),rgb(123, 163, 112));
+            margin:20px auto;
+            border-radius: 80px;
+            transition: 0.2s;
+
+        }
+        nav:hover {background:radial-gradient(circle,rgb(193, 250, 246),rgb(1, 6, 6),rgb(29, 141, 33));
+        transform: rotate(20deg);} 
+
+
+        
+        #layout2 p:hover::first-letter{
+            background: rgb(217, 255, 0);
+        }
+        
+
+        header h1 {
+            margin: 0;
+        }
+
+        #layout2 {
+            display: flex;
+        }
+
+        #layout2 p {
+            margin: 0;
+        }
+
+        main {
+            flex: 2;
+            background: rgb(146, 117, 212);
+            padding: 20px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: rgb(223, 139, 227);
+            padding: 20px;
+        }
+
+
+
+        footer {
+            background-color: rgb(98, 111, 251);
+            padding: 20px;
+            text-align: center;
+        }
+
+        #layout2 p::first-letter {
+            font-size: 3rem;
+            border: 1px solid red;
+            background: rgba(50, 60, 90, 0.5);
+        }
+        img {width: 30px;}
+        
+    </style>
+</head>
+
+<body>
+    <div id="layout1">
+        <header>
+            <h1><a href="https://www.naver.com/"><img src="imgs/짱구.png"></a>상단<a href="https://www.naver.com/"><img src="imgs/짱구.png"></a></h1>
+        </header>
+        <nav></nav>
+        <div id="layout2">
+            <main>
+                <h2>메인영역</h2>
+                <p>공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다.
+                    언론·출판이 타인의 명예나 권리를 침해한 때에는 피해자는 이에 대한 피해의 배상을 청구할 수 있다. 대통령후보자가 1인일 때에는 그 득표수가 선거권자 총수의 3분의 1 이상이
+                    아니면 대통령으로 당선될 수 없다.</p>
+
+                <p>국가는 평생교육을 진흥하여야 한다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 국회의원이 회기전에
+                    체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다. 제2항의 재판관중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다.
+                </p>
+
+
+            </main>
+            <aside>
+                <h3>부가영역</h3>
+                <p>공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다.
+                    언론·출판이 타인의 명예나 권리를 침해한 때에는 피해자는 이에 대한 피해의 배상을 청구할 수 있다. 대통령후보자가 1인일 때에는 그 득표수가 선거권자 총수의 3분의 1 이상이
+                    아니면 대통령으로 당선될 수 없다.</p>
+
+                <p>국가는 평생교육을 진흥하여야 한다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 국회의원이 회기전에
+                    체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다. 제2항의 재판관중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다.
+                </p>
+
+
+            </aside>
+        </div>
+        <footer>
+            하단정보
+        </footer>
+
+    </div>
+</body>
+
+</html>
