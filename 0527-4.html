@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <title>자바스크립트로 요소에 컨텐츠 넣기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {margin-top: 20px;}
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            border: 5px #CCD3CA outset;
+            display: flex; align-items: center;
+            border-radius: 30px;
+            box-shadow: -3px -3px 10px #747264;
+            /* transform: rotate(-20deg); */
+            transition: 0.5s;
+            background-color:#A67B5B ;
+        }
+
+        /* section:hover {
+            transform: rotate(0);
+            cursor: pointer
+        } */
+
+        h1 {
+            flex: 1;
+            background-color: red;
+            padding: 30px;
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        ol {
+            flex: 2;
+            background-color: yellowgreen;
+            list-style-position: inside;
+            padding: 20px;
+        }
+
+        p {
+            flex: 1;
+            background-color: #B5C18E;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>반응형 웹퍼블리싱 학습 순서</h1>
+        <ol>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>jquery</li>
+            <li>exercise</li>
+        </ol>
+        <ol>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>jquery</li>
+            <li>exercise</li>
+        </ol>
+        <p>11111</p>
+        <p>11111</p>
+        <p>11111</p>
+    </section>
+
+    <script>
+let sum=0;
+for(let i=0; i<=10; i++){
+sum +=i;   //sum=sum+i
+}
+console.log (sum);
+
+
+const x= document.querySelectorAll("ol li");//오브젝트,객체
+x[0].style.border="3px dashed red";
+x[1].style.border="3px dashed red";
+x[2].style.border="3px dashed red";
+x[3].style.border="3px dashed red";
+x[4].style.border="3px dashed red";
+</script>
+</body>
+
+</html>

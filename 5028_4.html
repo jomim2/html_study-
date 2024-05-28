@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이어 보이기/감추기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* 교재 211p */
+            /* box-sizing: border-box; */
+        }
+
+        body {
+            margin-top: 20px;
+        }
+
+        nav {
+            
+            max-width: 900px;
+            margin: auto;
+            /* border: 3px red solid; */
+
+        }
+
+        nav ul {
+            list-style-position: inside;
+        }
+
+        nav>ul {
+            /* 교재 p.286 아래 도표부분*/
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav>ul>li {
+            border: 3px orange solid;
+            /* flex: 1; */
+            background-color: beige;
+            flex-basis: 20%;
+            text-align: center;
+        }
+
+        .mainmenu {
+            background-color: #E6FF94;
+            display: inline-block;
+            width: 60%;
+        }
+
+        .submenu {
+            height: 0px;
+            border: 1px solid blue;
+            overflow-y: hidden;
+        }
+
+        /* 메인메뉴에 마우스를 대면 서브메뉴가 보인다 */
+        nav>ul>li .submenu {
+            transition: 0.5s;
+        }
+
+        nav>ul>li:hover .submenu {
+            height: 75px;
+        }
+
+        .submenu>li:hover {
+            background-color: #006769;
+        }
+
+        /* 공지사항 팝업 */
+        div {
+            border: 5px red dashed;
+            max-width: 900px;
+            margin: auto;
+            height: 80vh;
+            background-color: #40A578;
+            position: relative;
+            /* box-sizing: border-box; */
+
+        }
+
+        #popup {
+            box-sizing: border-box;
+            background: #9DDE8B;
+            width: 300px;
+            /* margin: auto; */
+            padding: 50px;
+            min-height: 40vh;
+            /* position: relative;left: 200px; */
+            position: absolute;
+            left: calc((100% / 2) - 150px);
+            top: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px black;
+            /* 교재246 */
+        }
+
+        #popup button {
+            padding: 3px 6px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #E6FF94;
+            font-size: 1rem;
+        }
+
+        #momo button {
+            padding: 3px 6px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #E6FF94;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="mainmenu">메뉴1</a>
+                <!-- 서브메뉴:시작 -->
+                <ul class="submenu">
+                    <li><a href="#">메뉴1_1</a></li>
+                    <li><a href="#">메뉴1_2</a></li>
+                    <li><a href="#">메뉴1_3</a></li>
+                </ul>
+                <!-- 서브메뉴:끝 -->
+            </li>
+            <li>
+                <a href="#" class="mainmenu">메뉴2</a>
+                <!-- 서브메뉴:시작 -->
+                <ul class="submenu">
+                    <li><a href="#">메뉴2_1</a></li>
+                    <li><a href="#">메뉴2_2</a></li>
+                    <li><a href="#">메뉴2_3</a></li>
+                </ul>
+                <!-- 서브메뉴:끝 -->
+            </li>
+            <li>
+                <a href="#" class="mainmenu">메뉴3</a>
+                <!-- 서브메뉴:시작 -->
+                <ul class="submenu">
+                    <li><a href="#">메뉴3_1</a></li>
+                    <li><a href="#">메뉴3_2</a></li>
+                    <li><a href="#">메뉴3_3</a></li>
+                </ul>
+                <!-- 서브메뉴:끝 -->
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <section id="popup">
+            <h2>공지사항</h2>
+            <button type="button" onclick="close1()">닫기</button>
+
+        </section>
+        <footer id="momo">
+            <button type="button" onclick="mimi()">보이기</button>
+        </footer>
+    </div>
+    <script>
+        alert('지금은\n4교시 입니다.');
+        function close1() {
+            // alert("클릭함");
+            document.getElementById("popup").style.display = 'none';
+        }
+        function mimi() {
+            // alert("div\n입니다!");
+            document.getElementById("popup").style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
