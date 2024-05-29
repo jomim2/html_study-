@@ -114,3 +114,9 @@ footer {
     bottom: 30px;
     right: 50px;
 }
+
+/* 작은기계장치 */
+@media(max-width:550px)
+{
+    #popup {width: 100%;}
+}    
