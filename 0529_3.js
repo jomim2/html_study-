@@ -5,6 +5,10 @@ function dat() {
     $popup.style.display = 'none';
 }
 
+$popup.addEventListener("click",tomato);
+function tomato(){
+    $popup.style.backgroundColor='tomato';
+}
 document.querySelector('footer').addEventListener("click", function () {
     $popup.style.display = 'block';
 });
@@ -20,6 +24,15 @@ const $blue = document.getElementById('blue1');
 $blue.addEventListener("click",blue2);
 function blue2() {
     $blue.style.backgroundColor='blue';
+}
+
+//const $momo = document.querySelector('.subMenu:nth-of-type(4)');
+const $momo = document.querySelectorAll('.subMenu')[3];
+
+console.log( $momo );
+
+function mimi() {
+    $momo.children[0].style.color='green';
 }
 
 

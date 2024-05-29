@@ -17,6 +17,10 @@ nav:not(.subMenu) {
 
 }
 
+nav {
+    /* padding-top: 15px; */
+    text-align: center;
+}
 
 
 header {
