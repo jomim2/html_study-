@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상단메뉴만들기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #layout {
+            max-width: 900px;
+            margin: auto;
+            border: 3px dotted black;
+        }
+
+        /* 상단 */
+        nav:not(.subMenu) {
+            margin-top: 35px;
+
+        }
+
+
+
+        header {
+            height: 100px;
+            border: 1px solid aqua;
+            background-color: #4F6F52;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* 메뉴 */
+        .mainMenu {
+            text-align: center;
+        }
+        nav li:hover .subMenu {
+        display: block;
+        
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        nav li {
+            /* border: 3px red dashed; */
+            width: 100px;
+            
+        }
+
+        
+
+        .subMenu {
+            
+            display: none; background: rgba(115, 152, 113, 0.85);
+        }
+
+        nav a {
+            display: block;
+        }
+
+        /* 메인 */
+        main {
+            height: 70vh;
+            border: 1px solid green;
+        }
+
+        main img {
+            height: 100%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* 하단 */
+        footer {
+            height: 100px;
+            background-color: #E8DFCA;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" class="mainMenu">메뉴1</a>
+                        <nav class="subMenu">
+                            <a href="#">서브메뉴1-1</a>
+                            <a href="#">서브메뉴1-2</a>
+                            <a href="#">서브메뉴1-3</a>
+                        </nav>
+                    </li>
+                    <li><a href="#" class="mainMenu">메뉴2</a>
+                        <nav class="subMenu">
+                            <a href="#">서브메뉴2-1</a>
+                            <a href="#">서브메뉴2-2</a>
+                            <a href="https://naver.com" target="_blank">서브메뉴2-3</a>
+                            <a href="#">서브메뉴2-4</a>
+                            <a href="#">서브메뉴2-5</a>
+                        </nav>
+                    </li>
+                    <li><a href="#" class="mainMenu">메뉴3</a>
+                        <nav class="subMenu">
+                            <a href="#">서브메뉴3-1</a>
+                            <a href="#">서브메뉴3-2</a>
+                            <a href="#">서브메뉴3-3</a>
+                            <a href="#">서브메뉴3-4</a>
+                        </nav>
+                    </li>
+                    <li><a href="#" class="mainMenu">메뉴4</a>
+                        <nav class="subMenu">
+                            <a href="#">서브메뉴4-1</a>
+                            <a href="#">서브메뉴4-2</a>
+                            <a href="#">서브메뉴4-3</a>
+                        </nav>
+                    </li>
+                    <li><a href="#" class="mainMenu">메뉴5</a>
+                        <nav class="subMenu">
+                            <a href="#">서브메뉴5-1</a>
+                            <a href="#">서브메뉴5-2</a>
+                            <a href="#">서브메뉴5-3</a>
+                        </nav>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <img src="imgs/summer1.jpg" alt="여름">
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>
