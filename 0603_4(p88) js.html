@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트로 태그요소 추가</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #layout {
+            max-width: 1000px;
+            margin: auto;
+            border: 3px solid red;
+            overflow: auto;
+        }
+
+        header {
+            background: #B5C18E;
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+        }
+
+        h1 {
+            margin-right: 10PX;
+            padding: 30px;
+            /* border: 1px dashed red; */
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            background-color: #C6EBC5;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px;
+            margin: 0 70PX 0 20PX;
+        }
+
+        nav a {
+            /* border: 1px solid green; */
+            width: 70px;
+            text-align: center;
+        }
+
+        main {
+            background: #FBFADA;
+            display: flex;
+            padding: 20px;
+        }
+
+        section {
+
+            padding: 200px 50px;
+            background-color: #AFD198;
+            /* border:  1px solid green; */
+            flex: 2;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        #right {
+            flex: 1.5;
+            /* background-color: #90D26D; */
+            /* border: 1px solid blue; */
+            height: 100%;
+        }
+
+        article {
+            background-color: #627254;
+            padding: 80px;
+        }
+
+        aside {
+            margin-top: 25px;
+            background-color: #C6EBC5;
+            padding: 80px;
+        }
+
+        footer {
+            background: #76885B;
+            padding: 10px;
+            padding-left: 150PX;
+            ;
+            /* text-align: center; */
+
+        }
+
+        address {
+            background-color: #AFD198;
+            padding: 5px;
+            max-width: 600px;
+        }
+
+        p {
+            background-color: #AFD198;
+            margin-top: 5px;
+            padding: 5px;
+            max-width: 600px;
+        }
+
+        /* 0~530픽셀 디자인 적용됨 */
+        @media (max-width: 530px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                }
+                nav {
+                    margin: 10px;
+                    max-width: 95%;
+                    
+                }
+                main {flex-direction: column;}
+                section {
+                    margin-right: 0;
+                }
+            footer{padding: 10px;}
+        }
+        section ul{
+            text-align: left;
+            list-style-position: inside;
+            /* border: #627254 1px solid; */
+        }
+        audio {max-width: 100%;}
+        video {max-width: 100%; height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <h1>
+                반응형 웹
+            </h1>
+            <nav>
+                <a href="#">menu1</a>
+                <a href="#">menu2</a>
+                <a href="#">menu3</a>
+                <a href="#">menu4</a>
+                <a href="#">menu5</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>콘텐츠 그룹01</h2>
+                <audio controls>
+                    <source src="media/radiant.mp3" type="audio/mpeg">
+                    </audio>
+                <video controls>
+                    <source src="media/movie.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section>
+                <h2>콘텐츠 그룹02</h2>
+                <audio controls>
+                    <source src="media/horse.mp3" type="audio/mpeg">
+                </audio>
+                <video controls>
+                    <source src="media/sea.mp4" type="video/mp4">
+                </video>
+            </section>
+            <div id="right">
+                <article>
+                    <h2>주요기사</h2>
+                </article>
+                <aside>
+                    <h3>광고</h3>
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <address>
+                경기도 부천시 오정구 삼정동 032)555-4444 wjddla7374@naver.com
+            </address>
+            <p>
+                COPYRIGHT ⓒ ALL right reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const $h2 = document.querySelector('main section:first-child h2');
+        // alert ($h2);
+        $h2.innerHTML += "<br><b style='font-size:1.2rem; color:red;'>태그가 추가됨 </b>";
+        const $p=document.createElement("p");
+        // alert($p)
+        $h2.after($p); //다음요소 즉 형제요소가 생긴다. before태그도 있음
+        $p.innerHTML='형제요소가 추가됨';
+
+        const h2 = document.querySelector('main section:nth-child(2) h2');
+        const $div=document.createElement("div");
+        h2.before($div);
+        $div.innerHTML='형제요소가 추가됨';
+
+        const pp= document.querySelector('section p')
+        const $ul = document.createElement('ul');
+        // alert($ul);
+        $ul.innerHTML=["<li>딸기</li><li>바나나</li><li>키위</li>"];
+        pp.after($ul); 
+    
+    </script>
+</body>
+
+</html>
