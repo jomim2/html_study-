@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        *{margin: auto;
+            font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;}
+        
+        body {padding-top: 80px; background-color: #F0EBE3;}
+
+        table {border-collapse: collapse;
+        text-align: center; 
+        background-color: #FFEFEF;
+        
+    }
+        td {padding: 15px;
+            border: 2px dashed #F3D0D7;
+            
+        }
+    </style>
+</head>
+<body>
+<script>
+    let table='<table>';
+    for (let i=2; i<=9; i++){
+        table +='<tr>';
+            for (let j=1; j<=9; j++){
+                table += '<td>' + i + '*' + j + '=' + i * j +'</td>';
+            }
+   table +='</tr>';
+    } table +='</table>';
+    document.write(table);
+</script>
+</body>
+</html>

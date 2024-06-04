@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교재 183 배경 그라디언트 적용하기</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #layout {
+            max-width: 1000px;
+            margin: auto;
+            overflow: auto;
+
+        }
+        body {
+            background-image: url('imgs/dog.png'),linear-gradient(to right,rgba(0,100,0,0),rgba(243, 208, 215, 1));
+        }
+        header {
+            background: #B5C18E;
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+        }
+
+        h1 {
+            margin-right: 10PX;
+            padding: 30px;
+            border: 3px dashed red;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            background-color: #C6EBC5;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px;
+            margin: 0 70PX 0 20PX;
+        }
+
+        nav a {
+            /* border: 1px solid green; */
+            width: 70px;
+            text-align: center;
+        }
+
+        main {
+            background: #FBFADA;
+            display: flex;
+            padding: 20px;
+        }
+
+        section {
+
+            padding: 20px 50px;
+            background-color: #AFD198;
+            /* border:  1px solid green; */
+            flex: 2;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        #right {
+            background: #AFD198 url('imgs/icon.png') repeat-x top/100px;
+            flex: 1.5;
+
+            /* border: 1px solid blue; */
+            height: 100%;
+        }
+
+        article {
+            /* background-color: #627254; */
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        aside {
+
+            text-align: center;
+            margin-top: 25px;
+            /* background-color: #C6EBC5; */
+            /* padding: 125px 0; */
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        aside p {
+            text-indent: 60px;
+            text-align: justify;
+        }
+
+        article b {
+            text-transform: lowercase;
+            letter-spacing: 5px;
+        }
+
+        footer {
+            background: #76885B;
+            padding: 10px;
+            padding-left: 150PX;
+            ;
+            /* text-align: center; */
+
+        }
+
+        address {
+            background-color: #AFD198;
+            padding: 5px;
+            max-width: 600px;
+        }
+
+        p {
+            background-color: #AFD198;
+            margin-top: 5px;
+            padding: 5px;
+            max-width: 600px;
+        }
+
+        /* 0~530픽셀 디자인 적용됨 */
+        @media (max-width: 530px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin: 10px;
+                max-width: 95%;
+
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            section {
+                margin-right: 0;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+        section ul {
+            text-align: left;
+            list-style-position: inside;
+            /* border: #627254 1px solid; */
+        }
+
+        audio {
+            max-width: 100%;
+        }
+
+        video {
+            max-width: 100%;
+            height: 400px;
+            /* display: none; */
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            /* position: fixed; */
+            /* left: -2000px; */
+            /* right: -2000px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <h1 draggable="true">
+                드래그하세요
+            </h1>
+            <nav>
+                <a href="#">menu1</a>
+                <a href="#">menu2</a>
+                <a href="#">menu3</a>
+                <a href="#">menu4</a>
+                <a href="#">menu5</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>콘텐츠 그룹01</h2>
+                <audio controls>
+                    <source src="media/radiant.mp3" type="audio/mpeg">
+                </audio>
+                <video controls>
+                    <source src="media/movie.mp4" type="video/mp4">
+                </video>
+                <p>라인컴퓨터 아트학원</p>
+            </section>
+            <section>
+                <h2>콘텐츠 그룹02</h2>
+                <audio controls>
+                    <source src="media/horse.mp3" type="audio/mpeg">
+                </audio>
+                <video controls>
+                    <source src="media/sea.mp4" type="video/mp4">
+                </video>
+                <p>라인컴퓨터 아트학원</p>
+            </section>
+            <div id="right">
+                <article>
+                    <h2>주요기사</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel magnam officiis velit, cumque
+                        ullam eveniet suscipit expedita sequi nihil doloremque fuga ad quia rem unde pariatur obcaecati
+                        <b>ISPAa blanditiis!</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut unde veniam
+                        cumque natus aperiam tempora sequi mollitia placeat quam fugit, rerum cupiditate accusantium
+                        consectetur obcaecati repellendus voluptatem! Ullam, repellat voluptatum.
+                    </p>
+                </article>
+                <aside>
+                    <h3>광고</h3>
+                    <p>대한민국의 국민이 되는 요건은 법률로 정한다. 국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 국가안전보장회의는 대통령이 주재한다. 연소자의 근로는 특별한 보호를
+                        받는다.</p>
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <address>
+            <span draggable="true" id="bbb">
+                경기도 부천시 오정구 삼정동 032)555-4444 wjddla7374@naver.com
+            </span>
+            </address>
+            <p >
+                COPYRIGHT ⓒ ALL right reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const $h2 = document.querySelector('main section:first-child h2');
+        // alert ($h2);
+        $h2.innerHTML += "<br><b style='font-size:1.2rem; color:red;'>태그가 추가됨 </b>";
+        const $p = document.createElement("p");
+        // alert($p)
+        $h2.after($p); //다음요소 즉 형제요소가 생긴다. before태그도 있음
+        $p.innerHTML = '형제요소가 추가됨';
+
+        const h2 = document.querySelector('main section:nth-child(2) h2');
+        const $div = document.createElement("div");
+        h2.before($div);
+        $div.innerHTML = '형제요소가 추가됨';
+
+        const pp = document.querySelector('section p')
+        const $ul = document.createElement('ul');
+        // alert($ul);
+        $ul.innerHTML = ["<li>딸기</li><li>바나나</li><li>키위</li>"];
+        pp.after($ul);
+
+        //그래그 이벤트 연습
+        const $h1=document.querySelector('h1');
+        
+        $h1.addEventListener("dragstart", ()=> zz(3,5) );
+        zz = ( i , j ) => {
+            let xx = i * j ; //15
+            $h1.innerHTML=xx;
+        }
+        //콘텐츠 그룹01 영역에서 목록태그를 드래그 하면 '수박'항목이 추가된다.
+        $ul.setAttribute("draggable",true);
+        $ul.addEventListener("dragstart",()=>oo("<li>수박</li>"));
+        oo= (i) => {
+            $ul.innerHTML+=i;
+        }
+        
+        //하단주소를 드래그하여 아래로 옮기기 (드래거블 트루, 클라스 같아야함)
+        document.addEventListener("dragstart",(e)=> 
+        e.dataTransfer.setData('zzz' , e.target.id));
+        document.addEventListener("dragover",(e) => e.preventDefault()); //이동허용
+        document.addEventListener("drop",(e)=> {
+            const x= e.dataTransfer.getData('zzz');
+            e.target.appendChild(document.getElementById(x));
+        })
+    </script>
+</body>
+
+</html>

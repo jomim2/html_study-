@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form and switch</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <label for="n">학점입력</label>
+        <input type="number" min="0" max="100" id="n">
+        <button>확인하기</button>
+    </form>
+    <p>결과가 확인되는 곳</p>
+    <script>
+        let x= document.querySelector('#n');
+        const y= document.querySelector('button');
+        y.addEventListener("click",()=>zz());
+        zz= ( ) =>{
+            let xx = x.value;
+            
+            if(xx>=60){
+                xx="통과";
+            }
+            else{
+                xx="재수강";
+            }
+            document.querySelector('p').innerHTML=xx;
+        }
+        
+    </script>
+</body>
+</html>

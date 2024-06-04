@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수 연습</title>
+</head>
+
+<body>
+    <h2>
+        마우스를 살짝 갖다 대세요.
+    </h2>
+    <main>
+        미션부분입니다.<br>
+        이 부분에 마우스를 살짝 대면 '라인 컴퓨터 아트학원'글자가 나오게 작업하세요.
+    </main>
+    <script>
+        const a1=25; //절대로 값이 변경 불가 const라서!
+        const a2=37; //값 변경 되지 않는 키워드! const
+
+
+        const $h2 = document.querySelector('h2');
+        // alert ($h2);
+        //<h2>에 마우스를 갖다대는 증상을 감지하면, a4()함수를 호출한다.
+        
+            $h2.addEventListener("mouseover", () => $h2.innerHTML="화살표 함수 연습중");
+            // 이 함수를 한번만 쓸 예정이면 이렇게 해도 됨
+            
+        
+        const a5 = document.querySelector('main');
+        a5.addEventListener("mouseenter",() => mimi() );
+        mimi = () => {a5.innerHTML="라인 컴퓨터 아트학원"};// 이 함수를 또 쓸 예정이면 이렇게 씀
+
+    </script>
+</body>
+</html>

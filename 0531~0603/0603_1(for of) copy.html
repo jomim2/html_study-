@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of 복습</title>
+</head>
+
+<body>
+    <h3>
+        이곳
+    </h3>
+    <script>
+        
+        // const x = [2,4,6,8]; //배열 Array (const 는 재할당이 안되고 값변경 안됨)
+        // let y = 0; //let 키워드는 재할당이 가능하다!(사칙연산 가능, 값변경가능)
+        // for(let i of x){
+        //     y += i;
+        //     document.querySelector('h3').innerHTML +="<br>"+ y;
+        // }
+
+        const xx =["딸기","바나나","포도"] //Array 
+        let yy="";
+        for (let i of xx){
+            yy += i;
+            document.querySelector('h3').innerHTML += "<br>" + yy;
+        }
+        
+        
+    </script>
+</body>
+</html>

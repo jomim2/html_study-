@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연습</title>
+    <style>
+    body {
+        background-image: url('imgs/뚱이.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        margin: auto;
+        max-width: 800px;
+        
+    }
+    p {
+        padding: 30px;
+        background-color:aqua;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <p>이곳에 결과를 표시합니다.</p>
+    <aside>
+
+    </aside>
+    <script>
+        
+    let m = prompt ('현재 얼마 있습니까?','');
+    let w = 0;
+    if (m>=2000 && m<2500) {
+        w='🍓딸기🍓';
+    }
+        else if(m>=2500 && m<3000){
+            w = '🍇포도🍇';
+        }
+        else if(m>=3000 && m<3500){
+            w='🍉수박🍉';
+        }
+        else if(m>=10000){
+            w='🍓🍇🍉이거 다 드릴게요🍓🍇🍉';
+        }
+        else {
+            w='😂돈이 부족하시네요😂';
+        }
+    document.querySelector('p').innerHTML=w;
+    
+
+    </script>
+</body>
+</html>
