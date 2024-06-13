@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩애니</title>
+    <style>
+        body {
+            height: 200vh;
+            background-image: radial-gradient(#FFD0D0, #FFCBCB, #FFEC9E);
+        }
+
+        #x {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+        }
+
+        #x.gra {
+            background-image: radial-gradient(circle, transparent 5%, #E1ACAC 10%);
+            animation: rara 1s alternate infinite;
+        }
+
+        @keyframes rara {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(10);
+                opacity: 0;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        article {
+            position: fixed;
+            width: 500px;
+            height: 300px;
+            background-image: radial-gradient(#FFEC9E, #FFD0D0, #FFCBCB);
+            box-shadow: 0 0 10px 3px black;
+            border-radius: 20px;
+            padding: 5px;
+            left: calc((100% - 500px) / 2);
+            top: 500px;
+            display: none;
+
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            display: inline-block;
+            left: 10px;
+            position: relative;
+        }
+
+        h4 {
+            display: inline;
+            font-size: 1.5rem;
+            text-align: center;
+            position:absolute;
+        }
+        footer{
+            position: relative;
+        }
+        #sup{
+            display: none;
+            width: 300px;
+            
+            left: calc(calc((100% - 300px) / 2));
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>start</h1>
+    <div id="x" class="gra"></div>
+    <section>
+        <h2>korean</h2>
+        <p>모든 국민은 직업선택의 자유를 가진다. 모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다. 군사법원의 조직·권한 및 재판관의 자격은
+            법률로 정한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 헌법재판소는 법관의 자격을 가진 9인의 재판관으로
+            구성하며, 재판관은 대통령이 임명한다. 국군은 국가의 안전보장과 국토방위의 신성한 의무를 수행함을 사명으로 하며, 그 정치적 중립성은 준수된다. 국가는 농수산물의 수급균형과 유통구조의
+            개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+
+        <p>국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다. 학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한
+            기본적인 사항은 법률로 정한다. 헌법재판소는 법률에 저촉되지 아니하는 범위안에서 심판에 관한 절차, 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 공무원의 직무상 불법행위로 손해를
+            받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다. 이 경우 공무원 자신의 책임은 면제되지 아니한다. 대통령후보자가 1인일 때에는 그 득표수가
+            선거권자 총수의 3분의 1 이상이 아니면 대통령으로 당선될 수 없다.</p>
+
+        <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한
+            조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다. 군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 국가는 지역간의 균형있는
+            발전을 위하여 지역경제를 육성할 의무를 진다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 농업생산성의
+            제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.</p>
+
+    </section>
+    <article>
+        <h3>🧡💛💚💙💜🤎팝업부분🧡💛💚💙💜🤎</h3>
+
+        <img src="C:\html_study\imgs\짱구.png">
+        <h4>오오오~ 예쁜누나다!</h4>
+    </article>
+    <footer>
+        <img id="sup" src="C:\html_study\imgs\흰둥이.png">
+    </footer>
+    <script>
+
+        const $close = document.querySelector('article');
+        // window.onload=()=>{
+        //     window.open('https://www.adobe.com/kr/','win',
+        //     'width=500,height=700,left=300,top=150'
+        //     )
+        // } 414p
+        //팝업창에 닫기 버튼 눌러서 닫기
+        setTimeout(() => off(), 2000); //3초 후에 off 함수를 호출한다.
+        off = () => {
+            document.querySelector('#x').style.display = 'none';
+            $close.style.display = 'block';
+            
+        }
+        $close.addEventListener('click', () => goodbye());
+        goodbye = () => {
+            $close.style.display = 'none';
+            document.querySelector('#sup').style.display = 'block';
+        }
+
+    </script>
+</body>
+
+</html>

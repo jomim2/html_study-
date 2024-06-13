@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열공부하기</title>
+</head>
+<body>
+    <h1>배열에 대하여</h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        
+        const $p=document.querySelectorAll('p'); //[0,1,2]
+        //alert($p[0]); 
+        let num=[8,4,6,12,20];
+        let num2=Math.max(...num);  ///최대값찾기와...연산자는 전계연산자(spread Operators)
+        //alert(num2);//출력 20 output 20
+        $p[0].innerText=num2;
+
+        let f1=['딸기','사과','바나나'];
+        let f2=[...f1];
+        //alert(f2 + '\n'+f1);
+        f2.push('수박'); //복제하면서 뒤에 추가
+        f2.unshift('키위'); //복제하면서 앞에 추가
+        console.log(f2);
+
+        let f3= [...f2,"체리"];
+        console.log(f3);
+        
+        f3=['포도',...f3];
+        // alert(f3);
+        $p[1].innerText=f3;
+    </script>
+</body>
+</html>

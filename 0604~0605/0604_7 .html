@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch 문</title>
+    <style>
+        body {max-width: 700px;
+        margin: auto;
+        box-sizing: border-box;
+        padding-top: 50px;
+    }
+        h3 {
+            
+            padding: 30px;
+            font-size: 3rem;
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>이곳에 결과가 나와요</h3>
+    <script>
+        let on=prompt('수강과목은?','');
+        on=on.toUpperCase();
+        if(on=="자바스크립트"){
+            on="JAVASCRIPT";
+        }if (on=="에이치티엠엘"){
+            on="HTML";
+        }
+        if (on=="씨에스에스"){
+            on="CSS";
+        }
+        switch(on){
+            case 'HTML':on+='은 1학점입니다.🍳';
+            break;
+            case 'CSS':on+='은 2학점입니다.🍚';
+            break;
+            case 'JAVASCRIPT':on+='는 3학점입니다.🍜';
+            break;
+            default:on='해당과목은 없습니다.🍩';
+        }
+        document.querySelector('h3').innerHTML=on;
+    </script>
+</body>
+</html>

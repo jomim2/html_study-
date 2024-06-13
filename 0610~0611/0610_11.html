@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스휠 (스크롤) 에 따른 디자인 변경</title>
+    <style>
+        *{margin: 0;
+        padding: 0;
+    box-sizing: border-box;}
+        body {
+            height: 200vh;
+            background-image: linear-gradient(pink,yellow,pink);
+        }
+        h1 {    
+            position: fixed;
+            background-color: aliceblue;
+            padding:30px;
+            width: 650px;
+            text-align: center;
+            border: 10px solid skyblue;
+            left: calc((100% - 650px) / 2);
+            border-radius: 100px 100px 0 0;
+            top: 100px;
+            transition: 2s;
+        }
+        h1.up{
+            top: 0;
+            border-radius: 0 0 100px 100px;
+            border: 10px dotted blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        스크롤을 내렸다가 다시 올려보세요.
+    </h1>
+    <script>
+        const up = document.querySelector('h1');
+        window.addEventListener('scroll',() => change());
+
+            
+        change=()=>{
+            let y=window.pageYOffset;
+            console.log(y);
+            if(y>500)
+                {
+                    up.classList.add('up');
+                }
+                else{
+                    up.classList.remove('up');
+                }}
+
+                
+            let a="a";
+            let b="b";
+            let tmp="";
+            tmp=a;
+            a=b;
+            b=tmp;
+                console.log(a+b);
+
+
+            
+    </script>
+</body>
+</html>

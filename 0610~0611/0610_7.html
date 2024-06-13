@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in and for of</title>
+</head>
+<body>
+    <ol>
+        <li>2500원</li>
+        <li>4700원</li>
+        <li>3300원</li>
+        <li>5200원</li>
+    </ol>
+    <footer>
+    here
+    </footer>
+    <script>
+    const x1=document.querySelector('ol');
+    const x=document.querySelectorAll('ol li');
+    const y=document.querySelector('footer');
+    
+    //const num=[1,2,3];
+    let sum=0;
+        x.forEach((i)=>{
+            sum += parseInt(i.innerText); //15700
+        });
+//console.log(sum);
+y.innerHTML=sum +"원입니다..";
+    </script>
+</body>
+</html>

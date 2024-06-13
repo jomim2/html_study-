@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval로 공굴리기</title>
+<style>
+    div{
+        top:20px;
+        width: 150px;
+        height:180px;
+        background-image: url("../imgs/dog.png");
+        border-radius: 100%;
+        position: relative;
+    }
+    footer {
+        width: 200px;
+        height: 200px;
+        background: 100% url("../imgs/food.png");
+        border-radius: 100%;
+        position: relative;
+        top:10px;
+        left: 50px;
+    }
+    p {
+        width: 200px;
+        height: 200px;
+        background: 100% url("../imgs/food.png");
+        border-radius: 100%;
+        position: relative;
+        top:10px;
+        left: 50px;
+    }
+</style>
+</head>
+<body>
+    <div></div>
+    <footer>
+
+    </footer>
+    <p>
+
+    </p>
+    <script>
+        const $div=document.querySelector('div');
+        const footer = document.querySelector('footer');
+        const $p = document.querySelector('p');
+        let i =10; 
+        let x =true;
+        setInterval(()=> move(),10) //0.01초 마다 move 함수 호출을 지속한다.
+        move=()=>{
+        if(x){
+            i++;
+            if(i==500){
+                x=false;
+            }
+        }
+        else{
+            i--;
+            if(i==0){
+                x=true;
+            }
+            
+        }
+        $div.style.left=i +'px';
+        footer.style.top=i +'px';
+        $p.style.bottom=i +'px';
+        }
+
+    </script>
+</body>
+</html>

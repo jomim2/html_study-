@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 속성 없데이트</title>
+</head>
+<body>
+    <h1>구조 분해 할당 Destructuring Assignment</h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        const $p=document.querySelectorAll('p');
+    let IU = {
+        name:'아이유',
+        addr :'분당',
+        hair:'검정색'
+    };
+    let addIU = {
+        eye:'갈색',
+        friend: '갈치',
+    }
+    //구조분해 할당!
+    let uuu={...IU,...addIU};
+    
+    let {name,addr,hair,eye,friend}=uuu;
+    // alert(eye);
+
+    $p[2].innerText=`나의 이름은 ${name}이고 ${addr}에 산다.
+    머리카락은 ${hair}색이고 눈동자는 ${eye}이다. 
+    내 친구는 ${friend}이다!`
+    
+    
+    
+    // console.log(IU.name);
+    // // let {name,hair}=IU;
+    // let {name,addr,hair}=IU;
+    // $p[1].innerText=`나의 이름은 ${name}이고 내가 사는 곳은 ${addr}이고 나의 머리카락 색깔은 ${hair}이다.`;
+    // $p[2].innerText=name;
+
+
+    
+    
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펼침메뉴를 이용한 값 전송하기</title>
+    <style>
+        body {
+            max-width: 900px;
+            background-color: #FFE8C8;
+            margin: auto;
+            
+            text-align: center;
+        }
+        select {
+            background-color: #C39898;
+            
+            width: 300px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        h3{ 
+            background-color: #DBB5B5;
+            font-size: 2rem;
+            /* justify-content: center; */
+            margin: auto;
+            border: 5px dashed #C39898;
+            width: 300px;
+            border-radius: 15px;
+        }
+        p {text-align: center;
+            
+            
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>야구장 입장료</h3>
+    <select id="ba">
+        <option>선택하세요</option>
+        <option value="1">👩아동👩</option>
+        <option value="2">👨‍🦱청소년👨‍🦱</option>
+        <option value="3">🧔성인🧔</option>
+    </select>
+        <p>
+        입장료는 여기에
+        </p>
+    <h3>과일선택</h3>
+    <select id="fr">
+        <option>선택하세요</option>
+        <option >🍎사과🍎</option>
+        <option >🍓딸기🍓</option>
+        <option >🍌바나나🍌</option>
+    </select>
+    <p id="h">
+        과일은 여기에
+    </p>
+    <h3 id="c">
+        총 합계
+    </h3>
+    <script>
+        let p1=0;
+        const x= document.querySelector('#ba');
+        x.addEventListener('change',()=> zz());
+        zz = () => {
+            // alert(x.value);
+            let y= x.value;
+            // alert(typeof y);
+            switch(y){
+                case '1': 
+                p1=0;
+                y=`👩아동은 ${p1} 원 입니다👩`;
+                break;
+                case '2':p1=2000; 
+                y=`👨‍🦱청소년은 ${p1} 원 입니다👨‍🦱`;
+                break;
+                default:p1=3000; 
+                y=`🧔성인은 ${p1} 원 입니다🧔`;
+            }
+            document.querySelector('p').innerHTML=y;
+            
+        }
+        let p2=0;
+        const xx= document.querySelector('#fr');
+        xx.addEventListener('change',()=> cc ());
+        cc= ()=>{
+            let y=xx.selectedIndex;
+            switch(y){
+                case 1: 
+                p2=1500;
+                y=`🍎사과는 ${p2}원 입니다🍎`;
+                break;
+                case 2:
+                p2=2000;
+                    y=`🍓딸기는 ${p2}원 입니다🍓`;
+                break;
+                default:
+                p2=3000;    
+                y=`🍌바나나는 ${p2}원 입니다🍌`;
+            }
+            document.querySelector('#h').innerHTML=y;
+        }
+
+        
+        
+        let oo =document.querySelector('#c');
+        oo.addEventListener('click',()=> o2());
+        o2= ()=> {
+            oo.innerHTML = "⚾총 합계는⚾ <br>😲"+ (p1+p2)+"원😲 <br>⚾입니다!⚾";
+        }
+
+    </script>
+</body>
+</html>

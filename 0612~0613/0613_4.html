@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>봄,여름,가을,겨울</title>
+    <style>
+    *{font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        section{
+            max-width: 2000px;
+            /* display: flex; */
+            text-align: center;
+            margin: auto;
+            height: 500px;
+        }
+        div{
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        button {font-size: 3rem;
+        background-color: pink;
+    border-radius: 20px;
+box-shadow: 5px 5px 3px gray;}  
+        
+
+    </style>
+</head>
+<body>
+    <section id="season">
+
+    </section>
+    <div>
+        <button>봄</button>
+        <button>여름</button>
+        <button>가을</button>
+        <button>겨울</button>
+        <button>사계절</button>
+    </div>
+    <script>
+        const season=document.querySelector('#season');
+        const $button=document.querySelectorAll('button');
+        
+        const x = ["<img src='../imgs/봄.png'>","<img src='../imgs/여름.png'>","<img src='../imgs/가을.png'>","<img src='../imgs/겨울.png'>"]
+        console.log(x);
+        x.forEach(i=>{
+            season.innerHTML+=`${i}`;
+        });
+        // season.innerHTML+=x;
+        const $img=document.querySelectorAll('img');
+        show = (j) => {
+                console.log(j);
+                if(j==0){
+                    $img[0].style.display='inline-block';
+                    $img[1].style.display='none';
+                    $img[2].style.display='none';
+                    $img[3].style.display='none';
+                }
+                else if(j==1){
+                    $img[0].style.display='none';
+                    $img[1].style.display='inline-block';
+                    $img[2].style.display='none';
+                    $img[3].style.display='none';
+                }
+                else if(j==2){
+                    $img[0].style.display='none';
+                    $img[1].style.display='none';
+                    $img[2].style.display='inline-block';
+                    $img[3].style.display='none';
+                }
+                else if(j==3){
+                    $img[0].style.display='none';
+                    $img[1].style.display='none';
+                    $img[2].style.display='none';
+                    $img[3].style.display='inline-block';
+                }
+                else {
+                    $img[0].style.display='inline-block';
+                    $img[1].style.display='inline-block';
+                    $img[2].style.display='inline-block';
+                    $img[3].style.display='inline-block';
+                }
+            }
+        $button.forEach((i,j)=>{
+            i.addEventListener('click',()=>show(j))
+            
+        })
+        
+    </script>
+</body>
+</html>

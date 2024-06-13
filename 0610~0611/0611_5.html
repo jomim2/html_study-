@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval() 매소드를 통해 콜백함수 이해하기</title>
+    <style>
+        h1{
+            background-color: palevioletred;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        setInterval(()=>x(),1000);
+        x=()=>{ //교재 373 내장객체
+        const d= new Date();
+        console.log(d.getDay());//[0,1,2,3,4,5,6] 0일요일
+
+            let i = d.getDay();
+            switch(i){
+                case 0:i="일요일";break;
+                case 1:i="월요일";break;
+                case 2:i="화요일";break;
+                case 3:i="수요일";break;
+                case 4:i="목요일";break;
+                case 5:i="금요일";break;
+                case 6:i="토요일";
+            }
+
+
+            // console.log(d.getSeconds());
+            document.querySelector('h1').innerHTML=
+            `🕐${d.getHours()}시${d.getMinutes()}분${d.getSeconds()}초🕐 <br>
+            ${i}입니다`;
+    }
+    </script>
+</body>
+</html>

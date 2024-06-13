@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>true / false 에 따른 답변</title>
+    <style>
+        body{background-color:skyblue}
+        p {
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: radial-gradient(yellow 20%,orange);
+            position: fixed;
+        }
+
+        div {
+            top: 10px;
+            left: calc((100% - 100px) / 2);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: radial-gradient(yellow 30%, white 30%);
+            position: fixed;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+ 💖
+    </p>
+    <div>
+       <br><br> 🥚🍳
+    </div>
+    <script>
+        const $p = document.querySelector('p'); //양옆 공
+        const $div = document.querySelector('div'); //아래
+        setInterval(() => move(), 10);
+        setInterval(() => move1(), 20);
+            let i = 10;
+            let sp = 5;
+            let j = true;
+            let x = 10;
+            let c = 5;
+            let z = true;
+
+        move = () => {
+
+            
+            if (j) {
+                i = i + sp;
+                if (i >= (window.innerWidth - $p.offsetWidth)) {
+                    j = false;
+                }
+            } else {
+                i = (i + (-sp));
+                if (i <= 0) {
+                    j = true;
+                }
+            }
+            $p.style.left = i + 'px';
+            // $div.style.background='pink';
+            
+        }
+        move1 = () => {
+            
+            if (z) {
+                x = x + c;
+                if (x >= (window.innerHeight - $div.offsetWidth)) {
+                    z = false;
+                }
+            } else {
+                x = (x + (-c));
+                if (x <= 0) {
+                    z = true;
+                }
+            }
+
+            $div.style.top = x + 'px';
+            // $div.style.background='blue';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

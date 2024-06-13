@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펼침메뉴(value값이 없을 때!)</title>
+</head>
+<body>
+    <section id="menu">
+        <h2>
+            선호 음식 유형
+        </h2>
+        <select>
+            <option>유형선택</option>
+            <option>한식</option>
+            <option>일식</option>
+            <option>중식</option>
+            <option>퓨전식</option>
+            
+        </select>
+    </section>
+    <p>결과표시부분</p>
+    <script>
+        const x=document.querySelector('#menu select'); //select 태그가 많으면 제일 처음꺼 하나만 됨
+        const y=document.querySelector('p');
+        x.addEventListener('change',()=>eat());
+        eat =()=> {
+            const i=x.selectedIndex;
+            
+            y.innerText='고객님은 '+x[i].innerText+"를 선택했습니다.";
+        }
+        
+    </script>
+</body>
+</html>

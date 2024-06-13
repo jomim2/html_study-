@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in and for of</title>
+</head>
+<body>
+    <ol>
+        <li>2500원</li>
+        <li>4700원</li>
+        <li>3300원</li>
+        <li>5200원</li>
+    </ol>
+    <footer>
+    here
+    </footer>
+    <script>
+    const x=document.querySelectorAll('ol li');
+    const y=document.querySelector('footer');
+    
+    x.forEach((i)=>
+{
+    //숫자+문자 조합에서 문자를 삭제하고 숫자를 정수형으로 변환
+    let z=parseInt(i.innerText);
+    console.log(z);
+    y.innerHTML+='<br>' +z;
+    })
+    
+    </script>
+</body>
+</html>

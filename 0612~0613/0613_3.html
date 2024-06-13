@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>전계연산자(spread)와 이미지배열</title>
+    <style>
+        * {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+body{
+    background-color: aquamarine;
+}
+        #imgBox {
+            max-width: 1000px;
+            /* height: 500px; */
+            margin: auto;
+            /* border: 5px dotted green; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around0;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px 5px gray;
+            font-size: 3rem;
+        }
+
+        button {
+            background-color: palevioletred;
+            font-size: 2rem;
+            border-radius: 20px;
+            box-shadow: 5px 5px 3px gray;
+
+
+        }
+
+        div {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>전계연산자를 사용한 이미지 배열</h1>
+    <section id="imgBox">
+        <!-- 이곳에 이미지 배열이 들어감 -->
+    </section>
+    <div>
+        <button id="evenButton">짝수만 보이기</button>
+        <button id="oddButton">홀수만 보이기</button>
+        <button id="show">모두 보이기</button>
+    </div>
+
+    <script>
+        let box = document.querySelector('#imgBox');
+
+        const x = ["../imgs/1.jpg", "../imgs/2.jpg"];
+        const y = ["../imgs/3.jpg", "../imgs/4.jpg"];
+        const z = ["../imgs/5.jpg", "../imgs/6.jpg"];
+        //전계연산자(spread) 를 사용하여 이미지 경로를 병합함.
+        const xy = [...x, ...y, ...z];
+        // alert(xy);
+        function addImages(images) {
+            images.forEach(i => {
+                box.innerHTML += `<img src="${i}" alt="이미지">`;
+            });
+        }
+        // 초기 이미지 추가
+        addImages(xy);
+        const $img = document.querySelectorAll('img');
+
+        // 홀수만 보이도록 처리하는 함수
+        function showEvenImages() {
+            $img.forEach((img, index) => {
+                if (index % 2 !== 0) {
+                    img.style.display = 'block';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        }
+
+        // 짝수만 보이도록 처리하는 함수
+        function showOddImages() {
+            $img.forEach((img, index) => {
+                if (index % 2 === 0) {
+                    img.style.display = 'block';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        }
+        function me() {
+            $img.forEach((img, index) => {
+                img.style.display = 'block';
+            })
+        }
+        // 버튼 클릭 이벤트 처리
+        const $evenButton = document.querySelector('#evenButton');
+        const $oddButton = document.querySelector('#oddButton');
+        const $show = document.querySelector('#show');
+
+        $evenButton.addEventListener('click', showEvenImages);
+        $oddButton.addEventListener('click', showOddImages);
+        $show.addEventListener('click', me);
+    </script>
+
+    </script>
+</body>
+
+</html>

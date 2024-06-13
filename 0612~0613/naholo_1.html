@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전계연산자를 사용한 이미지 배열</title>
+    <style>
+        body {
+            margin: auto;
+            text-align: center;
+        }
+        section {
+            margin:auto;
+            text-align: center;
+            background-color: aqua;
+            max-width: 1000px;
+            height: 200px;
+            justify-content: space-around;
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+
+    </section>
+    <div>
+<button>짝</button>
+<button>홀</button>
+<button>홀짝</button>
+    </div>
+    <script>
+        const here=document.querySelector('section');
+        const $button =document.querySelectorAll('button');
+        const $img=['<img src=../imgs/1.jpg>','<img src=../imgs/2.jpg>','<img src=../imgs/3.jpg>','<img src=../imgs/4.jpg>','<img src=../imgs/5.jpg>','<img src=../imgs/6.jpg>'];
+        here.innerHTML=$img;
+
+        $button[0].addEventListener('click',()=>ZAK());
+        ZAK =()=>{
+            
+            $img.forEach(i,j => { //i는 이미지 자체, j는 index
+                
+            if(j % 2 ==0 ){
+                i.style.display= 'inline';
+            }
+            else{i.style.display= 'none';}
+            })}
+        
+    </script>
+</body>
+</html>

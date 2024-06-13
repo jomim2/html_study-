@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연습</title>
+</head>
+<body>
+    <p>이곳에 결과를 표시합니다.</p>
+    <aside>
+        교재 342페이지 실행결과를 표시하는 곳!
+    </aside>
+    <script>
+    let age = 20;
+    let fee = '';
+    if (age<13) {
+        fee='2000원';
+    }
+        else if(age >=13 && age<20){
+            fee = '4000원';
+        }
+        else {
+            fee='6000원';
+        }
+    document.querySelector('p').innerHTML=fee;
+    
+    let age22 = prompt('나이입력','');
+    let fee22='';
+    if (age22 <13 || age22 >=65){
+        fee22='2000원';
+    } else if(age22 >=13 && age22 <20){
+        fee22 ='4000원';
+    } else{
+        fee22='6000원'
+    }
+    document.querySelector('aside').innerHTML=fee22;
+    </script>
+</body>
+</html>

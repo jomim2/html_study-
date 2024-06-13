@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펼침메뉴(select option)</title>
+</head>
+<body>
+    <section id="menu">
+        <h2>
+            선호 음식 유형
+        </h2>
+        <select>
+            <option>유형선택</option>
+            <option value="1">한식</option>
+            <option value="2">일식</option>
+            <option value="3">중식</option>
+            <option value="4">퓨전식</option>
+            
+        </select>
+    </section>
+    <p>결과표시부분</p>
+    <script>
+        const x=document.querySelector('#menu select'); //select 태그가 많으면 제일 처음꺼 하나만 됨
+        const y=document.querySelector('p');
+        x.addEventListener('change',()=>eat());
+        eat =()=> {
+            //alert(typeof x.value);//string 
+            let z=''; //재할당
+            const i = Number(x.value);
+            switch (i){
+                case 1:z="한식";
+                break;
+                case 2:z="일식";
+                break;
+                case 3:z="중식"; 
+                break;
+                case 4:z="퓨전식";
+            }
+            y.innerHTML="고객님은"+z+"를 선택했따";
+        }
+        
+    </script>
+</body>
+</html>
